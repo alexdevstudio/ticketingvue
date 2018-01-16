@@ -1,0 +1,142 @@
+.btn-outline-secondary a{
+    color: #868e96;
+}
+.navbar-brand img{
+  max-width: 120px;
+}
+.btn-outline-secondary:hover a{
+    color: #fff;
+}
+.loader-img{
+
+}
+@-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
+.loader-img {
+   -webkit-animation-name: spinner;
+   -webkit-animation-timing-function: linear;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-duration: 6s;
+
+   animation-name: spinner;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-duration: 6s;
+
+   -webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+   -ms-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+ }
+
+
+.info-color{
+  color: #0c5460;
+}
+.open-ticket .initial-reply{
+  border-radius: 0px;
+}
+ .completed-tickets{
+  border-color: #0c5460;
+
+}
+.pending-tickets{
+  border-color: #856404;
+}
+.technician-name {
+    color: #007bff;
+}
+.techincian-reply {
+    border-color: #017cff  !important;
+    border-width: 2px !important;
+}
+a:hover{
+text-decoration: none;
+}
+.loader {
+  width: 64px;
+}
+.w100{
+  width: 100%;
+}
+.reply-textarea{
+  padding: 5px 10px;
+}
+.initial-reply{
+  background: rgba(0,0,0,.03);
+}
+.small-loader{
+  width: 64px;
+}
+.reply {
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+.reply-time {
+    font-size: 12px;
+    color: #888;
+}
+
+.small-date {
+    line-height: 28px;
+}
+.fs-large {
+    font-size: 22px;
+
+}
+.initial-reply{
+  background: #ccc;
+}
+button[disabled]{
+  cursor: not-allowed;
+}
+.bg-grey {
+    background: #e2e2e2;
+}
+.card-block {
+    padding: 15px;
+}
+.cursor {
+  cursor: pointer;
+}
+img{
+  max-width: 100%;
+}
+i.fa.large {
+    font-size: 12rem;
+    color: #444;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
+.small-date{
+  font-size: 1rem;
+}
+
+.warning-color{
+  color: #856404;
+}
+
+.pointer{
+  cursor: pointer;
+}
