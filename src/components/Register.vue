@@ -10,12 +10,12 @@
               <hr>
               <div class="form-group" >
                 <label class="h5 " for="name">Όνομα</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name" v-model="user.user_first_name">
+                <input type="text" class="form-control" id="name" placeholder="Όνομα" v-model="user.user_first_name">
                 <p class="help-block" :class="{'text-danger' : errors.user_first_name}" v-if="errors.user_first_name">{{ errors.user_first_name[0] }}</p>
               </div>
               <div class="form-group" >
                 <label class="h5 " for="user_last_name">Επώνυμο</label>
-                <input type="text" class="form-control" id="user_last_name" placeholder="Your Last Name" v-model="user.user_last_name">
+                <input type="text" class="form-control" id="user_last_name" placeholder="Επώνυμο" v-model="user.user_last_name">
                 <p class="help-block" :class="{'text-danger' : errors.user_last_name}" v-if="errors.user_last_name">{{ errors.user_last_name[0] }}</p>
               </div>
               <div class="form-group" >
@@ -51,23 +51,23 @@
 
               <div class="form-group" >
                 <label class="h5 " for="user_telephone">Αριθμός Τηλεφώνου</label>
-                <input type="text" class="form-control" id="user_telephone" placeholder="Your Telephone Number" v-model="user.user_telephone">
+                <input type="text" class="form-control" id="user_telephone" placeholder="Αριθμός Τηλεφώνου" v-model="user.user_telephone">
                 <p class="help-block" :class="{'text-danger' : errors.user_telephone}" v-if="errors.user_telephone">{{ errors.user_telephone[0] }}</p>
               </div>
               <hr>
               <div class="form-group" >
                 <label class="h5 " for="user_email">Ηλ. Διεύθυνση</label>
-                <input type="text" class="form-control" id="user_email" placeholder="Your Email" v-model="user.user_email">
+                <input type="text" class="form-control" id="user_email" placeholder="Ηλ. Διεύθυνση" v-model="user.user_email">
                 <p class="help-block" :class="{'text-danger' : errors.user_email}" v-if="errors.user_email">{{ errors.user_email[0] }}</p>
               </div>
               <div class="form-group" >
                 <label class="h5 " for="user_password">Κωδικός</label>
-                <input type="password" class="form-control" id="user_password" placeholder="Your Password" v-model="user.user_password">
+                <input type="password" class="form-control" id="user_password" placeholder="Κωδικός" v-model="user.user_password">
                 <p class="help-block" :class="{'text-danger' : errors.user_password}" v-if="errors.user_password">{{ errors.user_password[0] }}</p>
               </div>
               <div class="form-group" >
                 <label class="h5 " for="user_password_confirmation">Επαλήθευση Κωδικού</label>
-                <input type="password" class="form-control" id="user_password_confirmation" placeholder="Re-Type Your Password" v-model="user.user_password_confirmation">
+                <input type="password" class="form-control" id="user_password_confirmation" placeholder="Επαλήθευση Κωδικού" v-model="user.user_password_confirmation">
                 <p class="help-block" :class="{'text-danger' : errors.user_password_confirmation}" v-if="errors.user_password_confirmation">{{ errors.user_password_confirmation[0] }}</p>
               </div>
 
@@ -100,15 +100,15 @@ export default {
     data() {
       return {
         user: {
-          user_first_name: 'Αλέξανδρος',
-          user_last_name: 'Τισάκοβ',
+          user_first_name: '',
+          user_last_name: '',
           user_geo_location: '',
           user_office: '',
           user_floor: '',
-          user_telephone: '6942636669',
-          user_email: 'alex@bluecdf.gr',
-          user_password: 'Epsil0n1',
-          user_password_confirmation: 'Epsil0n1'
+          user_telephone: '',
+          user_email: '',
+          user_password: '',
+          user_password_confirmation: ''
         },
         geoLocations: [],
         floors: [],

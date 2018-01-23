@@ -10,11 +10,11 @@
 
               <div class="form-group" >
                 <label class="h5 " for="user_email">Email</label>
-                <input type="text" class="form-control" id="user_email" placeholder="Your Email" v-model="user.user_email">
+                <input type="text" class="form-control" id="user_email" placeholder="Ηλ. Διεύθυνση" v-model="user.user_email">
               </div>
               <div class="form-group" >
                 <label class="h5 " for="user_password">Κωδικός</label>
-                <input type="password" class="form-control" id="user_password" placeholder="Your Password" v-model="user.user_password">
+                <input type="password" class="form-control" id="user_password" placeholder="Κωδικός" v-model="user.user_password">
               </div>
 
               <div class="text-center">
@@ -44,7 +44,7 @@ export default {
       return {
         user: {
 
-            user_email: 'alex@bluecdf.gr',
+            user_email: '',
             user_password: ''
         },
         logging: false,

@@ -6,15 +6,15 @@
           <div class="card-body text-center">
             <transition name="fade" class=""  v-if="activated">
               <div class="">
-                <h3>Activation Completed.</h3>
-                <p>Your account is active. Please login with your credentials</p>
+                <h3>Λογαριασμός Ενεργοποιήθηκε.</h3>
+                <p>Ο λογαριασμός σας έχει ενεργοποιηθεί. Παρακαλώ συνδεθείτε με τα στοιχεία που έχετε δηλώσει.</p>
                 <p class="lead">
-                  <router-link  :to="{name: 'Login'}" class="btn btn-primary btn-md">Login</router-link>
+                  <router-link  :to="{name: 'Login'}" class="btn btn-primary btn-md">Σύνδεση</router-link>
                 </p>
               </div>
             </transition>
             <transition  name="fade" class="" v-else>
-            <h3>Activating User...</h3>
+            <h3>Ενεργοποίηση Λογαριασμού...</h3>
           </transition>
           </div>
         </div>

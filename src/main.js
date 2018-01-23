@@ -14,7 +14,7 @@ import Navigation from './components/Navigation'
 //Components end
 
 Vue.component('app-navigation', Navigation)
-axios.defaults.baseURL = 'http://localhost:8000/'//'https://bluecdf.gr/api/';
+axios.defaults.baseURL = 'https://api.bluecdf.gr/'
 //axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 window.axios = axios;
 window.API = API;
