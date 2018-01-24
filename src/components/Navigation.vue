@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark ">
+  <nav class="navbar sticky-top navbar-expand-lg  navbar-dark bg-dark ">
     <div class="container">
     <router-link  :to="{name: 'Home'}" class="navbar-brand"><img src="/static/img/logo.png" alt="" class=" center-block"></router-link>
     <button class="navbar-toggler navbar-toggler-right"

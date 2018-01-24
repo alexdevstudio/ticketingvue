@@ -2,7 +2,7 @@
   <div class=" col-12 animated fadeIn">
     <div class="row"  v-if="!showForm">
     <div class="col-md-3 col-12 mb-2">
-      <div class="card" >
+      <div class="card new-ticket-cat" >
         <div class="text-center pt-2">
           <img src="static/img/desktop.png" alt="">
         </div>
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="col-md-3 col-12 mb-2">
-      <div class="card" >
+      <div class="card new-ticket-cat" >
         <div class="text-center pt-2">
           <img src="static/img/telephone.png" alt="">
         </div>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="col-md-3 col-12 mb-2">
-      <div class="card" >
+      <div class="card new-ticket-cat" >
         <div class="text-center pt-2">
           <img src="static/img/printer.png" alt="">
         </div>
@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="col-md-3 col-12 mb-2">
-      <div class="card" >
+      <div class="card new-ticket-cat" >
         <div class="text-center pt-2">
           <img src="static/img/databases.png" alt="">
         </div>
@@ -146,3 +146,9 @@ export default {
   }
 }
 </script>
+
+<style media="scoped">
+  .new-ticket-cat img{
+    max-width: 40%;
+  }
+</style>
