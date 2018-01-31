@@ -6,6 +6,7 @@
         <h3>Ολοκληρωμένα Αιτήματα</h3>
             <app-completedticket
               v-for="completedTicket in completdTickets"
+              :selected_categories="completedTicket.selected_categories_names"
               :category="completedTicket.ticket_category"
               :ticket_id="completedTicket.ticket_id"
               :description="completedTicket.ticket_description"
@@ -37,6 +38,10 @@ export default {
     }
   },
   created () {
+    window.axios.defaults.headers.common = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer ' + this.$store.state.userStore.authUser.access_token
+      };
     this.getCompletedTickets()
   },
   methods: {

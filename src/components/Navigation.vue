@@ -18,7 +18,8 @@
         </li>
       </ul>
       <ul class="navbar-nav pull-right text-right" v-if="userStore.authUser !== null && userStore.authUser.access_token">
-        <li class="nav-item pull-right">
+        <!-- <li class="nav-item "><router-link  :to="{name: 'Settings'}"   class="nav-link">Ρυθμίσεις</router-link></li> -->
+        <li class="nav-item ">
           <a href="#"  @click.prevent="logout"  class="nav-link">Αποσύνδεση</a>
         </li>
       </ul>

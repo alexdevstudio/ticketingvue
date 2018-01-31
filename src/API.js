@@ -20,6 +20,7 @@ class API {
   static getPendingTickets = 'api/getPendingTickets'
   static getTicket = 'api/getTicket'
   static getCompletedTickets = 'api/getCompletedTickets'
+  static ticketCategories = 'api/getTicketCategories'
   static postReply = 'api/postReply'
 
 

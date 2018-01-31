@@ -3,11 +3,36 @@
       <h4 class="card-header alert alert-info">
         {{categorySlug(category)}}  <small>(#{{ticket_id}})</small> <small class="small-date pull-right info-color">{{completedDate (time)}}</small>
       </h4>
+      <div class="card-block pb-0 pt-1">
+        <div class="ticket-description" >
+
+          <div class="initial-reply card-text mb-3 pb-3 reply my-reply">
+            <p class="lead mb-0">Επελεγμένες Κατηγορίες:</p>
+            <span  class="animated fadeIn">
+                <div class="col-12 white-bg pt-2 pb-0 mt-1  mb-1 radius4">
+                  <div class="row">
+                    <div v-for="cat in selected_categories" class="col-12 col-sm-6">
+                      <div class="form-group mb-0">
+                      <label  class="custom-control custom-checkbox" @click.prevent>
+                        <input type="checkbox" checked="checked"   class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">{{cat.name}}</span>
+                      </label>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                </span>
+          </div>
+        </div>
+      </div>
           <div class="card-block pb-0 pt-1 completed-tickets">
+           <span v-if="description">
             <div class="text-muted">
-            <strong>Αρχική περιγραφή του αιτήματος:</strong> <span class="reply-time">{{completedDate (time)}}</span>
+            <strong>Περιγραφή του αιτήματος:</strong> <span class="reply-time">{{completedDate (time)}}</span>
             </div>
-            <p class="card-text issue-description">{{description}}</p>
+            <p class="card-text issue-description mb-3">{{description}}</p>
+            </span>
               <div class=" alert alert-info">
                 <p>{{outcome}}</p>
                 <hr>
@@ -40,7 +65,7 @@
 
 export default {
 
-  props: ['ticket_id', 'category', 'description', 'outcome', 'time', 'completed_date', 'technician'],
+  props: ['ticket_id', 'selected_categories', 'category', 'description', 'outcome', 'time', 'completed_date', 'technician'],
   data () {
     return {
     }
@@ -52,7 +77,7 @@ export default {
       return t[3] + ":" + t[4] + " " + " " + t[2] + "-" + t[1] + "-" + t[0]
     },
     categorySlug (category) {
-      if(category == 'Telecommunications')
+      if(category == 'telecommunications')
         return 'Τηλέφωνα / ΦΑΞ';
       else if (category == 'computing')
         return 'Desktops / Laptops';

@@ -8,16 +8,15 @@
       <div v-else-if="pendingTickets.length > 0" class="col-12 mb-3 animated slideInUp" >
         <hr>
         <h3>Ανοιχτά Αιτήματα</h3>
-
             <app-pendingticket
               v-for="pendingTicket in pendingTickets"
+              :selected_categories="pendingTicket.selected_categories_names"
               :category="pendingTicket.ticket_category"
               :ticket_id="pendingTicket.ticket_id"
               :description="pendingTicket.ticket_description"
               :time="pendingTicket.ticket_created_at"
               :auto-update="15">
             </app-pendingticket>
-
     </div>
 
     </div>
@@ -39,16 +38,17 @@ export default {
     }
   },
   created () {
+    window.axios.defaults.headers.common = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer ' + this.$store.state.userStore.authUser.access_token
+      };
     this.getPendingTickets()
   },
   methods: {
     getPendingTickets () {
-      window.axios.defaults.headers.common = {
-        'Accept' : 'application/json',
-        'Authorization' : 'Bearer ' + this.$store.state.userStore.authUser.access_token
-        };
 
-        const user_id = this.$store.state.userStore.authUser.user_id
+
+      const user_id = this.$store.state.userStore.authUser.user_id
 
 
 
@@ -57,7 +57,6 @@ export default {
         this.pendingTickets = response.data.pending_tickets
       })
       .catch( error => {
-        console.log(error.response.data);
           if(error.response.status == 401)
             this.$router.push({name: 'Login'})
       })

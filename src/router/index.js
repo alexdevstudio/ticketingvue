@@ -9,6 +9,7 @@ import Dashboard from '@/components/auth/Dashboard'
 import SubmitTicket from '@/components/auth/SubmitTicket'
 import ReplyTicket from '@/components/auth/sections/ReplyTicket'
 import ViewTicket from '@/components/auth/sections/ViewTicket'
+import Settings from '@/components/auth/Settings'
 
 Vue.use(Router)
 
@@ -38,6 +39,13 @@ export default new Router({
       name: 'Activate',
       meta: { requiresAuth: false },
       component: Activate
+    },
+    {
+      path: '/settings',
+      name: 'Settings',
+      meta: { requiresAuth: true },
+      component: Settings
+
     },
     {
       path: '/dashboard',

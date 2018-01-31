@@ -4,11 +4,24 @@
 .navbar-brand img{
   max-width: 120px;
 }
+.btn-outline-primary:hover a,
 .btn-outline-secondary:hover a{
     color: #fff;
 }
+
 .loader-img{
 
+}
+.white-bg{
+  background: #fff;
+}
+
+.radius4{
+  border-radius: 4px;
+}
+
+.new-ticket-cat h4.card-title {
+    font-size: 1.2rem;
 }
 @-webkit-keyframes spinner {
     from { -webkit-transform: rotateY(0deg);    }
@@ -99,10 +112,12 @@ text-decoration: none;
 }
 .fs-large {
     font-size: 22px;
-
+}
+.fs-medium{
+  font-size: 19px;
 }
 .initial-reply{
-  background: #ccc;
+  background: #e0e0e0;
 }
 button[disabled]{
   cursor: not-allowed;

@@ -10,7 +10,25 @@
             Με θέμα: {{categorySlug (category)}}  <small>(#{{ticket_id}})</small> <small class="small-date pull-right info-color">Δημιουργήθηκε {{ completedDate(time) }}</small>
           </h4>
           <div class="ticket-description" >
-            <p class="initial-reply fs-large card-text mb-3 reply my-reply">{{ description }}</p>
+            <div class="initial-reply card-text mb-3 reply my-reply">
+              <p class="lead">Επελεγμένες Κατηγορίες:</p>
+              <span v-if="categories.length > 0" class="animated fadeIn">
+                  <div class="col-12 white-bg pt-3 pb-0 mt-2  mb-2 radius4">
+                    <div class="row">
+                      <div v-for="cat in categories" class="col-12 col-sm-6">
+                        <div class="form-group">
+                        <label  class="custom-control custom-checkbox" @click.prevent>
+                          <input type="checkbox" checked="checked"   class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">{{cat.name}}</span>
+                        </label>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  </span>
+              <p class="fs-large " v-if="description"><span class="lead">Περιγραφή:</span> <br>{{ description }}</p>
+            </div>
           </div>
               <div class="card-block pb-0 pt-1">
 
@@ -117,6 +135,7 @@ export default {
       closed: true,
       submitBtnValue: 'Αποστολή',
       activeDescription: true,
+      categories: []
     }
   },
   methods: {
@@ -130,6 +149,7 @@ export default {
         this.description = response.data.ticket.ticket_description
         this.category = response.data.ticket.ticket_category
         this.time = response.data.ticket.ticket_created_at
+        this.categories = response.data.selected_categories
         var closed = response.data.ticket.ticket_status;
 
 
